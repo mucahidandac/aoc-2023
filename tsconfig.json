@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ES6",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Node",
+    "sourceMap": true,
+    "inlineSources": true,
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "types": ["jest", "node"],
+  },
+  "exclude": ["**/node_modules/**/*", "**/dist/**/*"],
+}
