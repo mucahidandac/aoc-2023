@@ -20,7 +20,7 @@ Run tests
 pnpm test
 
 #for single test
-pnpm test -- 01
+pnpm test -- day-01
 ```
 
 Create a new day
