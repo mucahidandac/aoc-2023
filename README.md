@@ -1,6 +1,6 @@
-# Advent of Code Solutions
+# Advent of Code 2023 Solutions
 
-This repository contains my solutions for the [Advent of Code](https://adventofcode.com/) challenges.
+This repository contains my solutions for the [Advent of Code 2023](https://adventofcode.com/2023) challenges.
 
 ## Structure
 

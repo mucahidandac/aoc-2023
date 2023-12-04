@@ -18,10 +18,7 @@ class Card {
 
   getTotalPoint() {
     const total = this.getTotalMatch();
-    if (total !== 0) {
-      return Math.pow(2, total - 1);
-    }
-    return 0;
+    return total && Math.pow(2, total - 1);
   }
 }
 class CardManager {
