@@ -1,11 +1,12 @@
 import { getInput, getLines } from "../utils/io";
+import { quadraticFormulaRoots } from "../utils/math";
 
 class Race {
   constructor(private raceTimeMs: number, private distanceToPass: number) {}
 
   countWinCasesRawMs() {
     // wait + move = raceTime
-    // wait * move = distanceToPass)
+    // wait * move = distanceToPass
 
     let wait = 0;
     let move = this.raceTimeMs;
@@ -20,11 +21,7 @@ class Race {
   quadraticFormulaSolution() {
     // ax^2 + bx + c = 0 is a Quadratic equation where
     // a = 1, b = raceTime, c = distanceToPass
-    const b = this.raceTimeMs;
-    const c = this.distanceToPass;
-    const discriminant = Math.abs(b * b - 4 * c);
-    const r1 = (-b + Math.sqrt(discriminant)) / 2;
-    const r2 = (-b - Math.sqrt(discriminant)) / 2;
+    const [r1, r2] = quadraticFormulaRoots(1, this.raceTimeMs, this.distanceToPass);
     return Math.floor(r1 - r2);
   }
 }

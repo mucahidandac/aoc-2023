@@ -24,3 +24,11 @@ export function lcmArray(numbers: number[]): number {
     return lcm(first, lcmArray(numbers));
   }
 }
+
+export function quadraticFormulaRoots(a: number, b: number, c: number) {
+  // ax^2 + bx + c = 0 is a Quadratic equation where
+  const discriminant = Math.abs(b * b - 4 * c * a);
+  const r1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+  const r2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+  return [r1, r2];
+}
