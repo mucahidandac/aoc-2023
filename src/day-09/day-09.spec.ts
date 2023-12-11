@@ -8,6 +8,6 @@ describe("day-09", () => {
   });
   it("part 2", () => {
     expect(part2("./day-09-part-02.example.txt")).toBe(2);
-    expect(part2("./day-09.txt")).toBe(1);
+    expect(part2("./day-09.txt")).toBe(1089);
   });
 });
