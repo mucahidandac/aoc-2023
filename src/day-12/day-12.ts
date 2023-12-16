@@ -1,5 +1,5 @@
+import memoize from "lodash/memoize";
 import { getInput, getLines } from "../utils/io";
-import { memoize } from "../utils/memoize";
 
 type Char = "#" | "." | "?";
 const GOOD: Char = ".";
@@ -7,7 +7,7 @@ const DAMAGED: Char = "#";
 const UNKNOWN: Char = "?";
 
 const memoizedSolver = memoize(
-  (springString: string, damagedSegments: number[]) => {
+  (springString: string, damagedSegments: number[]): number => {
     if (springString.length === 0) {
       return damagedSegments.length > 0 ? 0 : 1;
     }
@@ -41,6 +41,9 @@ const memoizedSolver = memoize(
         memoizedSolver(GOOD + springString.slice(1), damagedSegments)
       );
     }
+  },
+  (...args: any[]) => {
+    return JSON.stringify(args);
   }
 );
 
